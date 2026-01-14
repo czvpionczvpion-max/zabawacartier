@@ -1169,48 +1169,6 @@ Zanim skorzystasz z jakichkolwiek ofert przedstawionych na tej stronie, gorąco 
     </footer>
 
     <script>
-    // Navbar scroll effect
-    const liquidNav = document.getElementById('liquidNav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            liquidNav.classList.add('scrolled');
-        } else {
-            liquidNav.classList.remove('scrolled');
-        }
-    });
-
-    // Liquid Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking links
-    const navLinks = document.querySelectorAll('.liquid-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            
-            // Update active link
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-        const isClickInsideNav = navMenu.contains(event.target) || hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && navMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-
     // Kick API Live Status Check
     async function checkKickLiveStatus() {
         const liveStatus = document.getElementById('liveStatus');
@@ -1290,6 +1248,7 @@ Zanim skorzystasz z jakichkolwiek ofert przedstawionych na tej stronie, gorąco 
 </body>
 
 </html>
+
 
 
 
